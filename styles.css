@@ -1,0 +1,321 @@
+/* Styles for the header container */
+header {
+  text-align: center;       /* center both h1 and p */
+  color: #b6916b;           /* warm brown tone */
+  margin: 20px 0;           /* space around header */
+  position: sticky;         /* keep header visible */
+  top: 0;                   /* required for sticky */
+  background: #fff8f0;      /* cream background so it doesn’t overlap weirdly */
+  z-index: 10;              /* keeps it above other content */
+}
+
+/* Bakery name (fancy calligraphy) */
+header h1 {
+  font-family: "Cookie", cursive;
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+/* Quote (simpler serif) */
+header p {
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Layout for the whole search area */
+.header-right {
+  position: absolute; /* stays in the corner */
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* The emoji button */
+.search-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* The input (collapsed by default) */
+.search-input {
+  width: 0;
+  opacity: 0;
+  padding: 5px;
+  border: 1px solid #b6916b;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  font-family: "Cookie", cursive;
+}
+
+/* Expanded state */
+.search-input.open {
+  width: 200px;
+  opacity: 1;
+}
+
+/* Navigation bar styles */
+.menu {
+  background: none;    /* remove background square */
+  border: none;        /* remove button border */
+  cursor: pointer;     /* pointer cursor */
+}
+
+.menu span {
+  display: block;         /* stack vertically */
+  width: 25px;            /* bar length */
+  height: 3px;            /* bar thickness */
+  background-color: black;
+  margin: 5px 0;          /* spacing between bars */
+}
+
+.top-left ul {
+  position: fixed; /* stays in place */
+  top: 0;
+  left: -250px; /* hidden off screen to the left */
+  width: 200px;
+  height: 100%;
+  background-color: #f8f1e7; /* cozy beige background */
+  list-style: none;
+  padding: 20px;
+  transition: left 0.3s ease; /* smooth slide */
+}
+
+.top-left ul.show {
+  left: 0; /* slide into view */
+}
+
+/* Light / Dark mode background */
+body {
+  background-color: #fff8e7; /* warm cream for day */
+  color: #2e2a24; /* dark text for day */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.night {
+  background-color: #3b2f2f; /* dark brown for night */
+  color: #f2e8d5; /* light cream text for night */
+}
+
+/* Align search + toggle */
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}
+
+/* Toggle switch */
+.dn-toggle {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.dn-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ffd9a0; /* soft cream sky */
+  border-radius: 40px;
+  transition: background-color 0.5s ease;
+}
+
+.icon {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  left: 5px;
+  bottom: 5px;
+  background-color: #ffeb3b; /* sun */
+  border-radius: 50%;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  box-shadow: 0 0 10px rgba(255, 235, 59, 0.7);
+}
+
+input:checked + .slider {
+  background-color: #5a3c2c; /* night sky brown */
+}
+
+input:checked + .slider .icon {
+  transform: translateX(40px);
+  background-color: #f2e8d5; /* moon cream */
+  box-shadow: inset -6px -6px 0 0 #d8cfc0,
+              0 0 10px rgba(242, 232, 213, 0.5);
+}
+
+.carousel figure {
+  flex: 0 0 250px; /* all cards same width */
+  margin: 0 10px;
+  text-align: center;
+}
+
+.carousel img {
+  width: 100%;
+  height: 200px; /* fixed height */
+  object-fit: cover; /* crop nicely */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.carousel figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+/* Shared base for all carousels */
+.carousel figure {
+  flex: 0 0 250px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.carousel img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.carousel figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* === Specific per section === */
+
+/* Best Sellers → scroll right */
+.carouselBS {
+  flex: 0 0 250px; /* all cards same width */
+  display: flex;
+  overflow: hidden;
+  animation: scrollRight 25s linear infinite;
+}
+
+@keyframes scrollRight {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Popular Recipes → scroll left */
+.carouselPS {
+  flex: 0 0 250px; /* all cards same width */
+  display: flex;
+  overflow: hidden;
+  animation: scrollLeft 30s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+/* New Recipes → maybe slower, opposite direction */
+.carouselNR {
+  flex: 0 0 250px; /* all cards same width */
+  display: flex;
+  overflow: hidden;
+  animation: scrollRight 35s linear infinite;
+}
+
+/* Navigation wrapper */
+nav.top-left {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Hamburger menu */
+nav .menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1100;
+  position: relative;
+}
+
+nav .menu span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar nav (hidden by default) */
+nav ul {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: -250px; /* hidden off screen */
+  width: 220px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+  transition: left 0.3s ease-in-out;
+  border-radius: 0 12px 12px 0;
+}
+
+/* Sidebar when open */
+nav ul.open {
+  left: 0;
+}
+
+/* Menu links */
+nav ul li {
+  margin: 1rem 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 0.5rem;
+  display: block;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: #f8d7da;
+  color: #a33d3d;
+}
+
+/* Optional paragraph inside nav */
+nav p {
+  font-size: 0.85rem;
+  color: #444;
+  margin: 1rem 0;
+  line-height: 1.4;
+}

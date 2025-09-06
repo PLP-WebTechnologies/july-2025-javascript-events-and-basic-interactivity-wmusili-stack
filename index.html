@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winnie's Cottage Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Winnie's Cottage Bakery</h1>
+    <p>Welcome to my humble abode of baked treats</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+  </header>
+
+<!-- Top right corner of the page -->
+<nav class="header-right">
+  <button class="search-icon">🔍</button>
+  <input type="text" class="search-input open" placeholder="Enter the recipe/item">
+</nav>
+
+
+    <!-- Day and night toggle -->
+  <label class = "dn-toggle">
+   <input type = "checkbox" id = "theme-toggle">
+     <div class = "slider">
+      <div class= "icon"></div>
+      </div>
+  </label>
+
+  </nav>
+
+  <!-- Welcome quote -->
+  <h2>All you knead is love… and a little butter.</h2>
+<!-- Navigation bar -->
+<nav class="top-left">
+  <button class="menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <p>Each page contains both the recipe and the baked goods sold.</p>
+  <ul>
+    <li><a href="C&M">Cupcakes & Muffins</a></li>
+    <li><a href="Cakes">Cakes</a></li>
+    <li><a href="Cookies">Cookies</a></li>
+    <li><a href="Yeast-stuff">Bread & Yeast Baked Goods</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Main Content -->
+  <main>
+     <!-- Best Sellers -->
+    <div class="carouselBS">
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\BS\CINNAMON ROLLS.jpeg" alt="Cinnamon Roll">
+    </a>
+    <figcaption>Cinnamon Roll – $3 ⭐ Bestseller</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\BS\cookies.jpeg" alt="Chocolate Chip Cookie">
+    </a>
+    <figcaption>Chocolate Chip Cookie – $2 ⭐ Bestseller</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\BS\Nutella Stuffed Donuts Recipe - The Food Charlatan.jpeg" alt="Nutella Donut">
+    </a>
+    <figcaption>Nutella Donut – $4 ⭐ Bestseller</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\BS\blueberry-muffin.jpg.jpeg" alt="Blueberry Muffin">
+    </a>
+    <figcaption>Blueberry Muffin – $3 ⭐ Bestseller</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\BS\chcocolate brioche buns.jpeg" alt="Chocolate Brioche Bun">
+    </a>
+    <figcaption>Chocolate Brioche Bun – $3.5 ⭐ Bestseller</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\BS\Moist Vanilla Bean Cupcake_ The Perfect Fluffy Treat.jpeg" alt="Vanilla Muffin">
+    </a>
+    <figcaption>Vanilla Muffin – $3 ⭐ Bestseller</figcaption>
+  </figure>
+
+  <!--Duplicate to make it seem like an endless loop-->
+   
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\BS\CINNAMON ROLLS.jpeg" alt="Cinnamon Roll">
+    </a>
+    <figcaption>Cinnamon Roll – $3 ⭐ Bestseller</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\BS\cookies.jpeg" alt="Chocolate Chip Cookie">
+    </a>
+    <figcaption>Chocolate Chip Cookie – $2 ⭐ Bestseller</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\BS\Nutella Stuffed Donuts Recipe - The Food Charlatan.jpeg" alt="Nutella Donut">
+    </a>
+    <figcaption>Nutella Donut – $4 ⭐ Bestseller</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\BS\blueberry-muffin.jpg.jpeg" alt="Blueberry Muffin">
+    </a>
+    <figcaption>Blueberry Muffin – $3 ⭐ Bestseller</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\BS\chcocolate brioche buns.jpeg" alt="Chocolate Brioche Bun">
+    </a>
+    <figcaption>Chocolate Brioche Bun – $3.5 ⭐ Bestseller</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\BS\Moist Vanilla Bean Cupcake_ The Perfect Fluffy Treat.jpeg" alt="Vanilla Muffin">
+    </a>
+    <figcaption>Vanilla Muffin – $3 ⭐ Bestseller</figcaption>
+  </figure>
+</div>
+
+
+
+    <!-- Popular Recipes -->
+    <div class="carouselPS">
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\PS\red-velvet cupcakes.jpeg" alt="Red Velvet Cupcake">
+    </a>
+    <figcaption>Red Velvet Cupcake – $4 ❤️ Popular</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\PS\banana-bread.jpg.jpeg" alt="Banana Bread">
+    </a>
+    <figcaption>Banana Bread – $5 ❤️ Popular</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\PS\oatmeal-cookie.jpg.jpeg" alt="Oatmeal Cookie">
+    </a>
+    <figcaption>Oatmeal Cookie – $3 ❤️ Popular</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\PS\croissant.jpg.jpeg" alt="Croissant">
+    </a>
+    <figcaption>Croissant – $2.5 ❤️ Popular</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\PS\chocolate-cake-slice.jpg.jpeg" alt="Chocolate Cake Slice">
+    </a>
+    <figcaption>Chocolate Cake Slice – $6 ❤️ Popular</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\PS\Brookies.jpg.jpeg" alt="Brookie">
+    </a>
+    <figcaption>Brookie – $4 ❤️ Popular</figcaption>
+  </figure>
+  <!--Duplicate to make it seem like an endless loop-->
+  
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\PS\red-velvet cupcakes.jpeg" alt="Red Velvet Cupcake">
+    </a>
+    <figcaption>Red Velvet Cupcake – $4 ❤️ Popular</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\PS\banana-bread.jpg.jpeg" alt="Banana Bread">
+    </a>
+    <figcaption>Banana Bread – $5 ❤️ Popular</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\PS\oatmeal-cookie.jpg.jpeg" alt="Oatmeal Cookie">
+    </a>
+    <figcaption>Oatmeal Cookie – $3 ❤️ Popular</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\PS\croissant.jpg.jpeg" alt="Croissant">
+    </a>
+    <figcaption>Croissant – $2.5 ❤️ Popular</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\PS\chocolate-cake-slice.jpg.jpeg" alt="Chocolate Cake Slice">
+    </a>
+    <figcaption>Chocolate Cake Slice – $6 ❤️ Popular</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\PS\Brookies.jpg.jpeg" alt="Brookie">
+    </a>
+    <figcaption>Brookie – $4 ❤️ Popular</figcaption>
+  </figure>
+
+</div>
+
+
+
+
+    <!-- New & Seasonal Recipes -->
+    <div class="carouselNR">
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\NR\pumpkin-pie.jpg" alt="Pumpkin Pie">
+    </a>
+    <figcaption>Pumpkin Pie – $12 🌸 New/Seasonal</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\NR\gingerbread-cookie.jpg" alt="Gingerbread Cookie">
+    </a>
+    <figcaption>Gingerbread Cookie – $5 🌸 New/Seasonal</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\NR\strawberry-tart.jpg" alt="Strawberry Tart">
+    </a>
+    <figcaption>Strawberry Tart – $10 🌸 New/Seasonal</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\NR\lemon-poppy-muffin.jpg" alt="Lemon Poppy Seed Muffin">
+    </a>
+    <figcaption>Lemon Poppy Seed Muffin – $3.5 🌸 New/Seasonal</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\NR\chocolate-brioche-new.jpg" alt="Chocolate Brioche Bun (New)">
+    </a>
+    <figcaption>Chocolate Brioche Bun – $3.5 🌸 New/Seasonal</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\NR\blueberry-cheesecake.jpg" alt="Blueberry Cheesecake Square">
+    </a>
+    <figcaption>Blueberry Cheesecake Square – $4 🌸 New/Seasonal</figcaption>
+  </figure>
+  <!--Duplicate to make it seem like an endless loop-->
+   
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\NR\pumpkin-pie.jpg" alt="Pumpkin Pie">
+    </a>
+    <figcaption>Pumpkin Pie – $12 🌸 New/Seasonal</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\NR\gingerbread-cookie.jpg" alt="Gingerbread Cookie">
+    </a>
+    <figcaption>Gingerbread Cookie – $5 🌸 New/Seasonal</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\NR\strawberry-tart.jpg" alt="Strawberry Tart">
+    </a>
+    <figcaption>Strawberry Tart – $10 🌸 New/Seasonal</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\NR\lemon-poppy-muffin.jpg" alt="Lemon Poppy Seed Muffin">
+    </a>
+    <figcaption>Lemon Poppy Seed Muffin – $3.5 🌸 New/Seasonal</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\NR\chocolate-brioche-new.jpg" alt="Chocolate Brioche Bun (New)">
+    </a>
+    <figcaption>Chocolate Brioche Bun – $3.5 🌸 New/Seasonal</figcaption>
+  </figure>
+
+  <figure>
+    <a href="#" target="_blank">
+      <img src="images\NR\blueberry-cheesecake.jpg" alt="Blueberry Cheesecake Square">
+    </a>
+    <figcaption>Blueberry Cheesecake Square – $4 🌸 New/Seasonal</figcaption>
+  </figure>
+</div>
+
+
+
+  <!-- Contact Form -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form action="" method="post">
+      <!-- Name -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Order Type -->
+      <label for="orderType">Reason for Contact:</label>
+      <select id="orderType" name="orderType" required>
+        <option value="">-- Please choose an option --</option>
+        <option value="order">Place an Order</option>
+        <option value="recipe">Recipe Request</option>
+        <option value="inquiry">General Inquiry</option>
+      </select>
+
+      <!-- Message -->
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <!-- Submit -->
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sweet Treats Bakery. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a> |
+      <a href="https://instagram.com/yourbakery" target="_blank">Instagram</a> |
+      <a href="mailto:yourbakery@email.com">Email</a>
+    </div>
+  </footer>
+
+</body>
+</html>
+
